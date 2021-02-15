@@ -11,23 +11,7 @@
         width: 30px;
     }
 </style>
-<script>
-    function calcString(){
-
-        var inputString = document.getElementById("textArea").value;
-        var reqIndex =  document.getElementById("reqIndex").value;
-        var subString =  document.getElementById("subString").value;
-
-        document.getElementById("firstOccurence1").value= inputString.indexOf(subString);
-        document.getElementById("lastOccurence1").value = inputString.lastIndexOf(subString);
-
-        document.getElementById("firstOccurence2").value= inputString.indexOf(subString,reqIndex);
-
-        document.getElementById("lastOccurence2").value= inputString.lastIndexOf(subString,reqIndex);
-
-        // document.writeln("<p>" + subString + "</p>");
-    }
-</script>
+<script src="lab1.js"></script>
 <body>
 
     <h1>The String Search is </h1>
@@ -40,7 +24,7 @@
     <div>
         <label> Enter substring to search for</label>
         <input type="text" name="subString" id="subString">
-        <input type="button" value="Search" id="searchButton" onclick="calcString()">
+        <input type="button" value="Search" id="searchButton" onclick="calcString();">
         <label for="At Index">At Index</label>
         <input class="smallTextArea" type="text" name="index" id="reqIndex">
     </div>
