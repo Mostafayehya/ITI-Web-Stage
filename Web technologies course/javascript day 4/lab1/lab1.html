@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="lab1.js"></script>
+    <title>Lab1</title>
+</head>
+
+<style>
+    .smallTextArea {
+        width: 30px;
+    }
+</style>
+<script src="lab1.js"></script>
+<body>
+
+    <h1>The String Search is </h1>
+
+
+    <textarea id="textArea" rows="5" cols="60" name="description">
+     This is a default testing text 
+     </textarea><br><br>
+
+    <div>
+        <label> Enter substring to search for</label>
+        <input type="text" name="subString" id="subString">
+        <input type="button" value="Search" id="searchButton" onclick="calcString();">
+        <label for="At Index">At Index</label>
+        <input class="smallTextArea" type="text" name="index" id="reqIndex">
+    </div>
+    <br><br>
+    <div>
+        <label>First Occurence located at index</label>
+        <input type="text" id="firstOccurence1">
+    </div>
+    <div>
+        <label>Last occurence located at index</label>
+        <input type="text" id="lastOccurence1">
+    </div>
+
+    <div>
+        <label> First occurence from your index located at index </label>
+        <input type="text" id="firstOccurence2">
+    </div>
+
+    <div>
+        <label> Last occurence from your index located at index </label>
+        <input type="text" id="lastOccurence2">
+    </div>
+
+
+</body>
+
+</html>
