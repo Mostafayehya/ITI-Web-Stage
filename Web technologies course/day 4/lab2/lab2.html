@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js"></script>
+    <title>DAY 4 - LAB2</title>
+</head>
+
+<body>
+
+    <label>Enter a sentence to split into words </label><br><br>
+
+    <div>
+            <input type="text" name="sentence" id="sentence">
+            <label> Split by</label>
+            <input type="text" name="delimiter" id="delimiter" size="5" >
+
+            <button onclick="splitString()">Split </button>
+
+    </div> <br><br>
+
+    <label>The sentence split into words is </label>
+
+    <div>
+        <textarea name="result" rows="10" id="resultText"></textarea>
+
+    </div><br><br>
+
+    <div>
+        <label>The first 10 characters of the input string are</label>
+        <input type="text" id="firstTen">
+    </div>
+
+</body>
+
+</html>

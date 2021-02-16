@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+
+
+        var isValidCC = false;
+        function validateEmail(email) {
+
+            //create your pattern 
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            // apply pattern to the paramter
+            var testOutput = mailformat.test(email);
+
+            if (testOutput == false)
+                alert("Invalid email");
+        }
+
+        function validateMobile(mobile) {
+
+            var phoneFormat = /^\d{11}$/;
+
+            var testOutput = phoneFormat.test(mobile);
+
+            if (testOutput == false)
+                alert("Invalid mobile");
+
+        }
+
+        function validateCreditCard(creditCard) {
+
+            var creditCardFormat = /\d{4}-\d{4}-\d{4}-\d{4}/;
+
+            var testOutput = creditCardFormat.test(creditCard);
+
+            isValidCC = testOutput;
+            if (testOutput == false)
+                alert("Invalid credit card")
+      
+        }
+
+
+        function parseCreditCard(cc) {
+
+            var stringAsArr =
+                cc.split("-");
+
+            var parsedCCElement = document.getElementById("creaditCardNumbers");
+            parsedCCElement.value = "";
+
+            if (isValidCC == true)
+                for (var i = 0; i < stringAsArr.length; i++) {
+                    parsedCCElement.value += stringAsArr[i] + "\n";
+                }
+
+        }
+        function validateForm() {
+
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var creditCard = document.getElementById("creditCard").value;
+            var parsedCreditCard = document.getElementById("email");
+
+            try {
+                validateEmail(email);
+                validateMobile(mobile);
+                validateCreditCard(creditCard);
+                parseCreditCard(creditCard);
+
+            } catch (err) {
+                switch (err) {
+                    case "Invalid Email":
+                        alert("Invalid email");
+                        break;
+
+                    case "Invalid mobile":
+                        alert("Invalid mobile");
+                        break;
+
+                    case "Invalid Credit Card Number":
+                        alert("Invalid Credit Card Number");
+                        break;
+
+                }
+            }
+
+            return false;
+
+        }
+    </script>
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <form name="contactUsForm" onsubmit="return validateForm() ">
+        <table>
+
+            <tr>
+                <td align="left"> Email</td>
+                <td align="right"><input name="email" id="email" required
+                        onsubmit="validateEmail(document.contactUsForm.email)"></td>
+            </tr>
+
+
+            <tr>
+                <td align="left"> Mobile</td>
+                <td align="right"><input name="mobile" id="mobile" required
+                        onsubmit="validateMobile(document.contactUsForm.mobile)"></td>
+            </tr>
+
+
+            <tr>
+                <td align="left"> Credit Card</td>
+                <td align="right"><input name="creditCard" id="creditCard" required
+                        onsubmit="validateCreditCard(document.contactUsForm.creditCard)"></td>
+            </tr>
+
+            <tr>
+                <td align="left"> Credit Card Numbers</td>
+                <td align="right"><textarea name="creaditCardNumbers" id="creaditCardNumbers" rows="4" cols="20"
+                        onsubmit="parseCreditCard(document.contactUsForm.creditCard)"></textarea> </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Validate!"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
