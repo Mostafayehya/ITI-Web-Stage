@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous browser</title>
+
+</head>
+
+<body>
+
+    <section>
+        <label>Your favourite browser is :</label>
+        <input type="text" name="textField" id="text">
+    </section><br>
+
+    <form action="#" onsubmit="return false">
+        <section>
+            <label>Select your favourite browser:</label>
+            <select name="combobox" id="droplist">
+                <option value="default">Choose One</option>
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="opera">Opera</option>
+                <option value="edge">Edge</option>
+            </select><br>
+
+            <section>
+                <input type="submit" value="Add" id="add-button" onclick="addBrowser()"></input>
+                <input type="submit" value="Delete" id="delete-button" onclick="deleteBrowser()"></input>
+            </section>
+    </form>
+    <script>
+
+
+        function addBrowser() {
+            var input = document.getElementById("text").value;
+            var droplist = document.getElementById("droplist");
+            var option = document.createElement("option");
+
+            if (input && input != "") {
+                option.text = input;
+                droplist.add(option);
+                document.getElementById("text").value="";
+
+            }
+        }
+        function deleteBrowser() {
+            var input = document.getElementById("text").value;
+            var droplist = document.getElementById("droplist");
+            var selected = droplist.value;
+
+            if (droplist.selectedIndex != 0) {
+                droplist.remove(droplist.selectedIndex);
+            }
+        }
+    </script>
+    </section>
+</body>
+
+</html>

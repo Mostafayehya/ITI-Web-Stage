@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+
+    <script src="CookiesManager.js"></script>
+    <script>
+
+        function saveFormDataToCookie() {
+
+            var date = new Date();
+            setCookie("userName", document.getElementById("userName").value, 365);
+            setCookie("creditCard", document.getElementById("creditCard").value, 365);
+            setCookie("name", document.getElementById("name").value, 365);
+            setCookie("birthdate", document.getElementById("birthdate").value, 365);
+            setCookie("browser", document.getElementById("browser").value, 365);
+            setCookie("color", document.getElementById("color").value, 365);
+            setCookie("empNumber", document.getElementById("empNumber").value, 365);
+            setCookie("revenu", document.getElementById("revenu").value, 365);
+            setCookie("email", document.getElementById("email").value, 365);
+            setCookie("phone", document.getElementById("phone").value, 365);
+            setCookie("website", document.getElementById("website").value, 365);
+
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="Registration form.css">
+</head>
+
+<body>
+    <form name="registerForm" class="box" action="result.html" method="GET" onsubmit="saveFormDataToCookie()">
+        <ul class="wrapper">
+            <h1>Registration Form</h1>
+            <br>
+            <h2>Account Information</h2>
+
+            <li class="form-row">
+                <label> User Name </label>
+                <input id="userName" type="text" name="firstname" required />
+            </li>
+            <li class="form-row">
+                <label>Password: </label>
+                <input class="password" type="password" name="password" required />
+            </li>
+
+            <li class="form-row">
+                <label> Confirm password: </label>
+                <input class="password" type="password" name="confirm password" />
+            </li>
+
+            <li class="form-row">
+                <label> Credit Card Number*</label>
+                <input id="creditCard" type="number" name="creditcard" required />
+            </li>
+
+            <hr>
+            <h2>Personal Information</h2>
+
+            <li class="form-row">
+                <label>Name </label>
+                <input id="name" type="text" name="name" required /> <br> <br>
+            </li>
+
+            <li class="form-row">
+                <label>Date of Birth </label>
+                <input id="birthdate" type="date" name="birthdate" required />
+            </li><br>
+
+            <li class="form-row">
+                <label>Favourite color</label>
+                <input id="color" class="input-color" type="color" name="favcolor" />
+            </li><br>
+
+            <li class="form-row">
+                <label>Profile photo</label>
+                <input type="file" name="photochooser" /> <br>
+            </li><br>
+
+            <li class="form-row">
+                <label>Favourite browser </label>
+                <input id="browser" type="text" name="favbrowser" /> <br> <br>
+
+            </li>
+
+            <hr>
+            <h2>Company Information</h3>
+
+                <li class="form-row">
+                    <label>No. of Employees</label>
+                    <input id="empNumber" type="number" name="employeenumber" /> <br><br>
+
+                </li>
+
+                <li class="form-row">
+                    <label>Estimate revenu</label>
+                    <input id="revenu" type="range" name="estimate revenu" />
+
+                </li> <br>
+
+                <h2>Contacts information</h2>
+
+                <li class="form-row">
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" required />
+                </li><br> <br>
+
+                <li class="form-row">
+                    <label>Phone</label>
+
+                    <input id="phone" type="tel" name="phone" placeholder="+20" minlength="6" maxlength="10" />
+                </li> <br> <br>
+
+                <li class="form-row">
+                    <label>Website URL</label>
+                    <input id="website" type="url" name="presonalwebsiteurl" />
+                </li> <br><br>
+
+                <hr>
+
+                <li class="form-row">
+                    <input id="btn2" class="btn" type="submit" value="Submit" />
+                    <input id="btn2" class="btn" type="button" value="Cancel" />
+                </li>
+
+        </ul>
+    </form>
+
+    <!--End of box-->
+</body>
+
+</html>

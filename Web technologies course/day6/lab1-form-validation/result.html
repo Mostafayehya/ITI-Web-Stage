@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit result</title>
+
+    <script src="CookiesManager.js"></script>
+
+    <script>
+        //   setCookie("userName", document.getElementById("userName").value, 365);
+        // setCookie("creditCard", document.getElementById("creditCard").value, 365);
+        // setCookie("name", document.getElementById("name").value, 365);
+        // setCookie("birthdate", document.getElementById("birthdate").value, 365);
+        // setCookie("browser", document.getElementById("browser").value, 365);
+        // setCookie("color", document.getElementById("color").value, 365);
+        // setCookie("empNumber", document.getElementById("empNumber").value, 365);
+        // setCookie("revenu", document.getElementById("revenu").value, 365);
+        // setCookie("email", document.getElementById("email").value, 365);
+        // setCookie("phone", document.getElementById("phone").value, 365);
+        // setCookie("website", document.getElementById("website").value, 365);
+
+        function loadData() {
+
+            document.getElementById("item1").innerText = getCookie("userName");
+            document.getElementById("item2").innerText = getCookie("creditCard");
+            document.getElementById("item3").innerText = getCookie("name");
+            document.getElementById("item4").innerText = getCookie("birthdate");
+            document.getElementById("item5").innerText = getCookie("browser");
+            document.getElementById("item6").innerText = getCookie("color");
+            document.getElementById("item7").innerText = getCookie("empNumber");
+            document.getElementById("item8").innerText = getCookie("revenu");
+            document.getElementById("item9").innerText = getCookie("email");     
+             document.getElementById("item10").innerText = getCookie("phone");
+             document.getElementById("item10").innerText = getCookie("website");
+
+
+            
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <ul>
+        <li id="item1"></li>
+        <li id="item2"></li>
+        <li id="item3"></li>
+        <li id="item4"></li>
+        <li id="item5"></li>
+        <li id="item6"></li>
+        <li id="item7"></li>
+        <li id="item8"></li>
+        <li id="item9"></li>
+        <li id="item10"></li>
+    </ul>
+
+    <script>
+        loadData();
+    </script>
+
+</body>
+
+</html>
