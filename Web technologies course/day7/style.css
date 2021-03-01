@@ -1,0 +1,13 @@
+section{
+
+    border-width: thick;
+    border-color: brown;
+
+}
+
+.container{
+    border-style:ridge;
+    width: 40%;
+    height: 300px;
+    display: inline-block;
+}

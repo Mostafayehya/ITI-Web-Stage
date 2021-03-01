@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <title>Multi page test</title>
+  </head>
+  <body>
+    <section data-role="page" id="firstPage">
+      <header data-role="header">
+        <h1>Page One title</h1>
+      </header>
+
+      <article data-role="content">
+        <h1>Page 1 Content</h1>
+        <a
+          href="#secondPage"
+          data-transition="flip"
+          data-direction="reverse"
+          data-role="button"
+        >
+          go to second page</a
+        >
+      </article>
+
+      <a href="#thatDialog" data-rel="dialog" data-role="button">Open Dialog</a>
+
+      <footer data-role="footer">
+        <h1>Page One Footer</h1>
+      </footer>
+    </section>
+
+    <div data-role="page" data-dialog="true" id="thatDialog">
+        <header>
+            <label id ="contact name">Contact name</label>
+        </header>
+      <h1>This is dialog</h1>
+    </div>
+
+    <section data-role="page" id="secondPage" data-add-back-btn="true">
+      <article data-role="content">
+        <h1>Page 2 Content</h1>
+        <a href="#firstPage" data-role="button">got first Page</a>
+      </article>
+    </section>
+  </body>
+</html>
