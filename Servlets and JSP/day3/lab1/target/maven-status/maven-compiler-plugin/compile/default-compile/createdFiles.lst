@@ -1,2 +1,5 @@
+FooterServlet.class
 DisplayParametersServlet.class
+HeaderServlet.class
+MenuPage.class
 LoginServlet.class

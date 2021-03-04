@@ -23,4 +23,39 @@ version="5.0" metadata-complete="true">
         <url-pattern>/DisplayParametersServlet</url-pattern>
     </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>HeaderServlet</servlet-name>
+        <servlet-class>HeaderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HeaderServlet</servlet-name>
+        <url-pattern>/HeaderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MenuPage</servlet-name>
+        <servlet-class>MenuPage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MenuPage</servlet-name>
+        <url-pattern>/MenuPage</url-pattern>
+    </servlet-mapping>
+
+
+    
+    <servlet>
+        <servlet-name>FooterServlet</servlet-name>
+        <servlet-class>FooterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FooterServlet</servlet-name>
+        <url-pattern>/FooterServlet</url-pattern>
+    </servlet-mapping>
+
+
+
 </web-app>
