@@ -32,7 +32,7 @@ public class RegisterServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         String registerStatus = request.getParameter("registerStatus");
-
+        out.println("<div style='width:40%; margin:30px auto;'>");
         out.println("<FORM style='margin: 0 auto;' method= POST>");
         out.println("<h1 style='font-size:300%; font-weight: bold;'>Registration Form</h1>");
         out.println("<h2>Please Enter the user details</h2>");
@@ -45,6 +45,8 @@ public class RegisterServlet extends HttpServlet {
         out.println("<BR><BR> <INPUT TYPE=RESET VALUE=Reset>");
         out.println("<INPUT TYPE=SUBMIT VALUE=Submit button>");
         out.println("</FORM>");
+        out.println("</div>");
+
 
 
         if (registerStatus != null && registerStatus.equals("fail")) {
