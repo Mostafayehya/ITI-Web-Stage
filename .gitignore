@@ -2,3 +2,10 @@ Web technologies course/day9/Contacts/ClientSide_Projects
 /Servlets and JSP/day6/lab2/CustomJSPTag/target/
 /Servlets and JSP/day6/lab1 - Copy/target/
 /Servlets and JSP/day6/lab1 - extended sqltag/target/
+/Servlets and JSP/day7/lab1/CustomJSPTag/target/
+/Servlets and JSP/day7/lab1/CountUsers/target/
+/Servlets and JSP/day8/lab2-security/target/
+*/target/*
+*.class
+
+

@@ -1,38 +1,29 @@
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 
-
 import java.io.*;
 
-public class FileDownloadServlet
-        extends HttpServlet {
-
-    ServletConfig servletConfig;
 
 
+public class FileUploadServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse
+            response)
+            throws ServletException, IOException {
+// Create path components to save the file
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-            response.setContentType("text/plain");
-            response.setHeader("Content-disposition", "attachment; filename=download.txt");
-
-            try(InputStream in = request.getServletContext().getResourceAsStream("/WEB-INF/download.txt");
-                OutputStream out = response.getOutputStream()) {
-
-                byte[] buffer = new byte[1048];
-
-                int numBytesRead;
-                while ((numBytesRead = in.read(buffer)) > 0) {
-                    out.write(buffer, 0, numBytesRead);
-                }
-
-            } catch (IOException exception){
-                exception.printStackTrace();
-            }
+        String path = request.getParameter("destination");
+        Part filePart = request.getPart("file");
+        String fileName = filePart.getSubmittedFileName();
+        PrintWriter out = response.getWriter();
+        try {
+            filePart.write(path + fileName);
+            out.println("New file " + fileName + " created at " + path);
+        } catch (FileNotFoundException fne) {
+            out.println("Error While Uploading Your File");
         }
+
     }
 
-
-
-
+}

@@ -1,2 +1,4 @@
-package filters;public class ResponseFilter {
+package filters;
+
+public class ResponseFilter {
 }

@@ -2,6 +2,17 @@
 https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" 
 version="5.0" metadata-complete="true">
 
+
+    <filter>
+        <filter-name>IPLoggerFilter</filter-name>
+        <filter-class>filters.IPLoggerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>IPLoggerFilter</filter-name>
+        <servlet-name>SearchFormServlet</servlet-name>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>SearchFormServlet</servlet-name>
         <servlet-class>service.SearchFormServlet</servlet-class>

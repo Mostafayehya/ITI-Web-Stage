@@ -1,0 +1,8 @@
+<table border="1">
+    <tbody>
+        <tr><th>Activity Name</th><th> Location</th> <th> Time</th></tr>
+        <tr><td>AJAX LAB</td><td> online</td> <td> 9:00AM</td></tr>
+        <tr><td>AJAX Lecutre</td><td> online</td> <td> 12:00PM</td></tr>
+        <tr><td>Project</td><td> home</td> <td> 5:00PM</td></tr>
+    </tbody>
+</table>

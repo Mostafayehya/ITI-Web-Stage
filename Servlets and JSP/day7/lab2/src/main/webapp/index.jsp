@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: moust
-  Date: 3/11/2021
-  Time: 12:05 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Validation</title>
+</head>
+<body>
+
+<p>
+    Enter your name and email:
+</p>
+
+<form method="post" action="Greeting">
+
+    Name: <input type="text" name="username"> <br>
+    Email: <input type="text" name="email"> <br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+
+</body>
 </html>
