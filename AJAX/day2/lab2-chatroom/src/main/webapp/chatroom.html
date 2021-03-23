@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Chat Room</title>
+</head>
+<body>
+
+<h1 align="center" style="width: 60%; margin: 30px auto;">Web Socket Chat</h1>
+
+<div class=" card " style="width: 60%; margin: 30px auto; ">
+
+    <div class="fs-2 card-header text-white bg-dark mb-3">
+        Recent Chat history
+    </div>
+    <div class="card-body">
+
+
+        <div id="messages">
+
+        </div>
+    </div>
+
+    <div class="card-footer">
+
+        <div class="input-group mb-3">
+            <input id="userMessage" type="text" class="form-control" placeholder="Insert Message"
+                   aria-label="Insert Message" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="send">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ONLINE USERS -->
+
+<div class=" card text-end " style="width: 60%; margin: 30px auto; ">
+
+    <div class="fs-2 card-header text-white bg-success mb-3">
+        Online users
+    </div>
+
+    <div id="users" class="card-body">
+
+
+    </div>
+
+    <div class="card-footer text-end">
+
+        <div class="text-end">
+            <p id="welcome" style="float: left;">Welcome xyz</p>
+            <a id="logout" style="float: right;" href="#" class="btn btn-primary text-end">Log out</a>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

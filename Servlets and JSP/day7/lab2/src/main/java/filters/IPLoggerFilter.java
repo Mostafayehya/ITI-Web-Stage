@@ -16,7 +16,12 @@ public class IPLoggerFilter implements Filter {
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 
-        filterConfig.getServletContext().log("+++++++++++++++++++++++++++++++++++ IP of the host+++++++++++++ \n "+ servletRequest.getRemoteAddr());
+        filterConfig.getServletContext().log("++++++++++++++++++++++++++++++++++++++++++++++++++++\n +" +
+                " IP of the host ++++++++++++++++++++++++++" +
+                " \n "+ servletRequest.getRemoteAddr());
+
+        
+        filterChain.doFilter(servletRequest,servletResponse);
 
 
     }

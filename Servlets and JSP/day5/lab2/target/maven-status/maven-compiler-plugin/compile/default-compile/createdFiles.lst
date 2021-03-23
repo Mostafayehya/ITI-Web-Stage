@@ -1,2 +1,5 @@
+filters\ResponseFilter.class
 domain\User.class
+filters\UserInputFilter.class
+filters\IPLoggerFilter.class
 service\SearchFormServlet.class

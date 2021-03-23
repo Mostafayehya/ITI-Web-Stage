@@ -1,0 +1,29 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="day3">
+    <class name="Person"  table="person" catalog="inheritance4" optimistic-lock="version">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+
+        <discriminator column="person_type" type="java.lang.String"/>
+        <property name="firstName" column="first_name"/>
+        <property name="lastName" column="last_name"/>
+
+        <joined-subclass name="Student" table="student">
+            <key column="id"></key>
+            <property name="department" column="department"/>
+        </joined-subclass>
+
+
+        <joined-subclass name="Teacher" table="teacher">
+            <key column="id"></key>
+            <property name="hiringDate" column="hire_date" type="java.util.Date"/>
+        </joined-subclass>
+
+
+
+    </class>
+</hibernate-mapping>

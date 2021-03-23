@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IntillijTest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>IntillijTest</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="AjaxCourseCodes-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="IntillijTest:war exploded" />
+    </root>
+  </artifact>
+</component>

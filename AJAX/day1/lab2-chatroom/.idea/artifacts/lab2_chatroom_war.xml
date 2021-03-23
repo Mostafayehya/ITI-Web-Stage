@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lab2-chatroom:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>lab2-chatroom</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="lab2-chatroom-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="lab2-chatroom:war exploded" />
+    </root>
+  </artifact>
+</component>

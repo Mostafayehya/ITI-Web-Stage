@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2021 11:44:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Product" table="product" catalog="biddingschema" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="seller" class="dao.Seller" fetch="select">
+            <column name="seller_id" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="150" />
+        </property>
+        <property name="manufacturingName" type="string">
+            <column name="manufacturing_name" length="100" not-null="true" />
+        </property>
+        <property name="manufacturingDate" type="date">
+            <column name="manufacturing_date" length="10" not-null="true" />
+        </property>
+        <property name="expirationDate" type="date">
+            <column name="expiration_date" length="10" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+        <property name="offeredDate" type="date">
+            <column name="offered_date" length="10" not-null="true" />
+        </property>
+        <property name="finishDate" type="date">
+            <column name="finish_date" length="10" not-null="true" />
+        </property>
+        <set name="categories" table="product_has_category" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="product_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="dao.Category">
+                <column name="category_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="buyerBidProducts" table="buyer_bid_product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_id" not-null="true" />
+            </key>
+            <one-to-many class="dao.BuyerBidProduct" />
+        </set>
+        <set name="buyerBuyProducts" table="buyer_buy_product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_id" not-null="true" />
+            </key>
+            <one-to-many class="dao.BuyerBuyProduct" />
+        </set>
+    </class>
+</hibernate-mapping>

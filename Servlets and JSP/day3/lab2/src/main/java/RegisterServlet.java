@@ -73,7 +73,8 @@ public class RegisterServlet extends HttpServlet {
         int rowsEffected = 0;
 
         if (firstName== null || firstName.isEmpty() ||lastName== null || lastName.isEmpty() ||
-                password== null || password.isEmpty() ||userName== null || userName.isEmpty()) {
+                password== null || passwo
+                .rd.isEmpty() ||userName== null || userName.isEmpty()) {
             response.sendRedirect("RegisterServlet?registerStatus=fail");
             return;
         }

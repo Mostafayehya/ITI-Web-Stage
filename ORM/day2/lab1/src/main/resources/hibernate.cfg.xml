@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory >
+        <property name = "hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver</property>
+        <property name = "hibernate.connection.url">
+            jdbc:mysql://localhost:3306/biddingschema</property>
+        <property name = "hibernate.connection.username">
+            hibernate </property>
+        <property name ="hibernate.connection.password">
+            root </property>
+        <property name ="hibernate.dialect">
+            org.hibernate.dialect.MySQL8Dialect
+        </property>
+
+        <mapping resource="day2/dao/Buyer.hbm.xml"/>
+        <mapping resource="day2/dao/BuyerBidProduct.hbm.xml"/>
+        <mapping resource="day2/dao/BuyerBuyProduct.hbm.xml"/>
+        <mapping resource="day2/dao/Category.hbm.xml"/>
+        <mapping resource="day2/dao/Product.hbm.xml"/>
+        <mapping resource="day2/dao/Seller.hbm.xml"/>
+        <mapping resource="day2/dao/User.hbm.xml"/>
+        <mapping resource="day2/dao/Buyer.hbm.xml"/>
+
+<!--        <mapping class="day2.entities.Buyer"/>-->
+<!--        <mapping class="day2.entities.BuyerBidProduct"/>-->
+<!--        <mapping class="day2.entities.BuyerBidProductId"/>-->
+<!--        <mapping class="day2.entities.BuyerBuyProduct"/>-->
+<!--        <mapping class="day2.entities.BuyerBuyProductId"/>-->
+<!--        <mapping class="day2.entities.Category"/>-->
+<!--        <mapping class="day2.entities.Product"/>-->
+<!--        <mapping class="day2.entities.Seller"/>-->
+<!--        <mapping class="day2.entities.User"/>-->
+    </session-factory>
+</hibernate-configuration>

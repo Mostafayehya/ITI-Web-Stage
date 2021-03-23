@@ -1,0 +1,48 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" 
+version="5.0" metadata-complete="true">
+
+
+    <filter>
+        <filter-name>ValidationFilter</filter-name>
+        <filter-class>filters.ValidationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ValidationFilter</filter-name>
+        <url-pattern>/Greeting</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>IPLoggerFilter</filter-name>
+        <filter-class>filters.IPLoggerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>IPLoggerFilter</filter-name>
+        <servlet-name>BasicServlet</servlet-name>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>BasicServlet</servlet-name>
+        <servlet-class>BasicServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>BasicServlet</servlet-name>
+        <url-pattern>/BasicServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Greeting</servlet-name>
+        <servlet-class>Greeting</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Greeting</servlet-name>
+        <url-pattern>/Greeting</url-pattern>
+    </servlet-mapping>
+</web-app>
