@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82b94ece-c25e-4e74-a708-d623a5eeda36" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/classes/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/classes/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT/WEB-INF/classes/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT/WEB-INF/classes/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/day2-lab3-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day3/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../day3/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/IPLoggerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/IPLoggerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/ResponseFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/ResponseFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/UserInputFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/src/main/java/filters/UserInputFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/target/day5-lab2-searchwithjsp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/target/day5-lab2-searchwithjsp-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/target/day5-lab2-searchwithjsp-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/target/day5-lab2-searchwithjsp-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day5/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../day5/lab2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day6/lab1/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day6/lab1/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/IPLoggerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/IPLoggerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filters/ValidationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filters/ValidationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/valError.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/valError.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day8/lab1-downloadupload/src/main/java/FileUploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../day8/lab1-downloadupload/src/main/java/FileUploadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../day8/lab1-downloadupload/src/main/webapp/fileupload.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../day8/lab1-downloadupload/src/main/webapp/fileupload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Web technologies course/day9/Contacts/ClientSide_Projects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Web technologies course/day9/Contacts/ClientSide_Projects" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1phDTgnbdVYt5FAEaFhKmv0rt5R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../AJAX/day1/lab1" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82b94ece-c25e-4e74-a708-d623a5eeda36" name="Default Changelist" comment="" />
+      <created>1615626461046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615626461046</updated>
+      <workItem from="1615626481734" duration="3237000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
