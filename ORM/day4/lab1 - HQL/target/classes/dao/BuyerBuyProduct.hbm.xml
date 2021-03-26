@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2021 11:44:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.BuyerBuyProduct" table="buyer_buy_product" catalog="biddingschema" optimistic-lock="version">
+        <composite-id name="id" class="dao.BuyerBuyProductId">
+            <key-property name="buyerId" type="int">
+                <column name="buyer_id" />
+            </key-property>
+            <key-property name="productId" type="int">
+                <column name="product_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="buyer" class="dao.Buyer" update="false" insert="false" fetch="select">
+            <column name="buyer_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="product" class="dao.Product" update="false" insert="false" fetch="select">
+            <column name="product_id" not-null="true" />
+        </many-to-one>
+        <property name="paymentDate" type="date">
+            <column name="payment_date" length="10" not-null="true" />
+        </property>
+        <property name="amount" type="float">
+            <column name="amount" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

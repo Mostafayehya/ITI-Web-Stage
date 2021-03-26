@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 20, 2021 11:44:09 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="dao.Buyer" table="buyer" catalog="biddingschema" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="dao.User" fetch="select">
+            <column name="user_id" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="value" type="string">
+            <column name="value" length="150" not-null="true" />
+        </property>
+        <set name="buyerBuyProducts" table="buyer_buy_product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="buyer_id" not-null="true" />
+            </key>
+            <one-to-many class="dao.BuyerBuyProduct" />
+        </set>
+        <set name="buyerBidProducts" table="buyer_bid_product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="buyer_id" not-null="true" />
+            </key>
+            <one-to-many class="dao.BuyerBidProduct" />
+        </set>
+    </class>
+</hibernate-mapping>
