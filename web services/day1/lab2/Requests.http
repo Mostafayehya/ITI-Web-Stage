@@ -1,0 +1,130 @@
+
+# Add new Student
+POST http://localhost:9191/SOAP-Day1/ws/student HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:student="http://webservice.lab1.day1/">
+    
+    <soap:Body>
+      <student:addStudent>
+        <arg0>
+            <age>1</age>
+            <birthDate>5-5-2020</birthDate>
+            <email>kaka@gmail.com</email>
+            <gender>male</gender>
+            <id>9</id>
+            <name>lplp</name>
+            <working>true</working>
+        </arg0>
+      </student:addStudent>
+    </soap:Body>
+
+</soap:Envelope>
+
+###
+
+# get Student Request
+POST http://localhost:9191/SOAP-Day1/ws/student HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:student="http://webservice.lab1.day1/">
+
+    <soap:Body>
+     <student:getStudent>
+        <arg0>
+            10
+        </arg0>
+     </student:getStudent>
+
+    </soap:Body>
+
+</soap:Envelope>
+
+
+###
+
+# Update Student Request
+POST http://localhost:9191/SOAP-Day1/ws/student HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:student="http://webservice.lab1.day1/">
+    
+    <soap:Body>
+        <student:updateStudent>
+        <arg0>10</arg0>
+        <arg1>
+            <age>1</age>
+            <birthDate>15-3-1111</birthDate>
+            <email>yehyax23@gmail.com</email>
+            <gender>male</gender>
+            <id>1</id>
+            <name>fffff</name>
+        </arg1>
+    </student:updateStudent>
+
+</soap:Envelope>
+
+### 
+
+
+# delete Student Request
+POST http://localhost:9191/SOAP-Day1/ws/student HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:student="http://webservice.lab1.day1/">
+
+    <soap:Body>
+     <student:deleteStudent>
+        <arg0>10</arg0>
+     </student:deleteStudent>
+
+    </soap:Body>
+
+</soap:Envelope>
+
+
+###
+# ERROR -> No way to find out where is this add method
+POST http://localhost:9191/SOAP-D1/ws/calculator HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    
+    <soap:Body>
+        <add>
+            <arg0>33</arg0>
+            <arg1>33</arg1>
+        </add>
+    </soap:Body>
+
+</soap:Envelope>
+
+
+
+
+
+###
+# SOAP Fault - Division by zero (Runtime Exception)
+POST http://localhost:9191/SOAP-D1/ws/calculator HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:jets="http://jets.iti.gov.eg/">
+    
+    <soap:Body>
+        <jets:div>
+            <arg0>12</arg0>
+            <arg1>0</arg1>
+        </jets:div>
+    </soap:Body>
+
+</soap:Envelope>

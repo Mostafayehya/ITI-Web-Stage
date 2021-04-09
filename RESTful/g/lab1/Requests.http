@@ -1,0 +1,54 @@
+//get all employees
+GET http://localhost:9191/rest/api/accounts HTTP/1.1
+Accept: application/json
+
+###
+
+//get employee
+GET http://localhost:9191/rest/api/accounts/1 HTTP/1.1
+Accept: application/json
+
+###
+
+//add employee
+POST http://localhost:9191/rest/api/accounts HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "4",
+    "userName": "restttt",
+    "fullName": "testtt",
+    "password": "145",
+    "phone": "01112145679",
+    "address": "smart"
+}
+
+###
+
+//delete all employee
+DELETE  http://localhost:9191/rest/api/accounts HTTP/1.1
+Content-Type: application/json
+
+###
+
+//update employee
+PUT http://localhost:9191/rest/api/accounts/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "1",
+    "userName": "twsttt",
+    "fullName": "Ahmedzzzz",
+    "password": "123111",
+    "phone": "0111909090",
+    "address": "cairo"
+}
+
+###
+
+//delete employee with this id
+DELETE  http://localhost:9191/rest/api/accounts/2 HTTP/1.1
+Content-Type: application/json
+
+###
+

@@ -51,12 +51,6 @@
             <artifactId>javax.el-api</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.4.29.Final</version>
-            <scope>runtime</scope>
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
@@ -101,6 +95,24 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                  <execution>
+                
+                    <goals>
+                      <goal>exec</goal>
+                    </goals>
+                  </execution>
+                </executions>
+                <configuration>
+                  <executable>maven</executable>
+                  <mainClass>JPATest</mainClass>
+                </configuration>
+              </plugin>
 
         </plugins>
     </build>

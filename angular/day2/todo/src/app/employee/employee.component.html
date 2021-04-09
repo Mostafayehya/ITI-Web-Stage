@@ -1,0 +1,184 @@
+<p>employee works!</p>
+<h3>Employee first name is {{ employee.firstName }}</h3>
+
+<h3>Full name is {{ getFullName() }}</h3>
+
+<button (click)="setFirstName()">Change First Name</button>
+
+<h3>Using Events</h3>
+<input type="text" (keyup.enter)="changeName(myInput.value)" #myInput />
+
+<h3>Property binding</h3>
+
+<!--  property binding -->
+<input
+  [value]="employee.firstName"
+  (keyup.enter)="changeName(myInput.value)"
+  #myInput
+/>
+
+<!-- two way binding  = property binding + event binding -->
+<!-- I can do it using two ways, the first one as we did in line 11  -->
+<!-- second one using the [(ngModel)] syntax, but you have to import some modeuls to make this works as expected   -->
+<h3>Two way binding on employee lastName</h3>
+<input type="text" [(ngModel)]="employee.lastName" />
+
+<!-- using assets  -->
+
+<img src="./assets/img/newimg.png" />
+
+<!-- Banana in a box -> property binding -->
+
+<h3>Class binding depending on a condition</h3>
+<input type="number" [(ngModel)]="employee.age" />
+<h1
+  [class.red-class]="employee.age > 20"
+  [class.green-class]="employee.age < 20"
+>
+  your age is {{ employee.age }}
+</h1>
+
+<!-- Don't ever write style binding, it is not recommended  -->
+
+<!-- ng class verses class binding -->
+<!-- the main feature of ng classes is that you can apply multiple class on the same condition  -->
+
+<h1
+  [ngClass]="{
+    'abc green-class': employee.age >= 20,
+    'red-class': employee.age < 20
+  }"
+>
+  This is an ngClass test
+</h1>
+
+<!-- Hiding elements depending on an input -->
+
+<h1
+  [hidden]="employee.age > 20"
+  [ngClass]="{ 'abc red-class': employee.age < 20 }"
+>
+  Sorry you are underaged
+</h1>
+
+<!-- if condition -->
+
+<!-- ngIf is put on the outer tag  -->
+<h2
+  *ngIf="employee.age > 20"
+  [ngClass]="{ 'abc red-class': employee.age < 20 }"
+>
+  Sorry you are underaged using ngI
+</h2>
+
+<!-- ngIf vs hidden -> hidden it exists in the dom but in ngIf it removes it completely from the DOM 
+
+when to use ngIf vs Hidden ?
+
+Answer) is the data changes rapidally, and if not use ngIf 
+
+-->
+
+<!-- 
+    Directives -> 3 types 
+    1) structure directive -> ngIf,ngFor -> starts with * , changing DOM 
+    2) property directive  -> class binding, property binding  as it changes in the structure of an existing element   
+    3)
+
+
+-->
+
+<!-- Arrays -->
+<h1>
+  -----------------------------------------------------------------------------------
+</h1>
+
+<table>
+  <tr *ngFor="let item of names; let currentIndex = index">
+    <td>{{ currentIndex }}</td>
+    <td>{{ item }}</td>
+  </tr>
+</table>
+
+<!--
+Day 2 tasks -> make a table that displays emplouees 
+
+1-Age in text box and I can change it
+
+2-Delete button
+
+3- if age > 20 make student name color different 
+
+4- Full name 
+
+5- tottal number of students with age < 20 
+
+-->
+
+<form class="pos" #employeeForm = "ngForm" (ngSubmit) = "addEmployee(employeeForm.value)">
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="firstName" ngModel />   
+  </div>
+
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastName" ngModel />
+  </div>
+
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input type="number" class="form-control" id="age" ngModel />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+<br />
+<br />
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Full Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empl of employees; let currentIndex = index">
+      <td>{{ currentIndex }}</td>
+      <td>{{ empl.firstName }}</td>
+      <td>{{ empl.lastName }}</td>
+      <td>{{ empl.getFullName() }}</td>
+      <td><input type="text" value="{{ empl.age }}" /></td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteEmployee(currentIndex)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- 
+
+    creating service 
+
+    cmd -> ng g s text
+
+    how to prevent service to be visible on application level and be visible only over specic module ?
+    Answer) add it to provides in specic module, and make an object in the constructor of the component
+
+    dependency injection only over the level on constructor
+ -->
+
+
+ <!-- 
+
+    TODO list 
+
+    
+  -->

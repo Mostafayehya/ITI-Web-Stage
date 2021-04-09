@@ -1,0 +1,46 @@
+
+GET http://localhost:9191/restful/api/employees/1 HTTP/1.1
+Accept: application/json
+
+###
+
+POST http://localhost:9191/restful/api/employees HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name": "4",
+    "age": "27",
+    "salary": "500",
+    "department": "4",
+    "username": "mostafa",
+    "password": "456789",
+    "email": "most@gmail.com",
+    "phoneNumber" : "01068897213"
+}
+
+###
+
+DELETE  http://localhost:9191/restful/api/employees/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+PUT http://localhost:9191/rest/api/accounts/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name": "5",
+    "age": "26",
+    "salary": "6000",
+    "department": "7",
+    "username": "yehya",
+    "password": "93258",
+    "email": "yehya@gmail.com",
+    "phoneNumber" : "011111111"
+}
+
+###
+

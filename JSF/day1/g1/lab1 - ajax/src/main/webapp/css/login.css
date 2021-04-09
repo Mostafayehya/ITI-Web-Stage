@@ -1,0 +1,13 @@
+body{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+h1{
+    margin-left: -5%;
+}
+
+#loginBtn, #showBtn{
+    height: 40px;
+    width: 40%;
+}

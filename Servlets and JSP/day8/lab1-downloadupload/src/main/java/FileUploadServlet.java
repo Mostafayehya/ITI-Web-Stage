@@ -15,6 +15,8 @@ public class FileUploadServlet extends HttpServlet {
 
         String path = request.getParameter("destination");
         Part filePart = request.getPart("file");
+
+        
         String fileName = filePart.getSubmittedFileName();
         PrintWriter out = response.getWriter();
         try {

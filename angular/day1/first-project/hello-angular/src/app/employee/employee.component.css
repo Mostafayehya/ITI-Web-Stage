@@ -1,0 +1,17 @@
+p{
+    color: red;
+}
+
+.red-class{
+    color:red; 
+}
+
+.green-class{
+    color:green;
+}
+
+.pos{
+    text-align: center;
+    padding-left: 550px;
+    width: 70%
+}

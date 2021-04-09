@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:form prependId="false">
+
+    <h:head>
+        <title>JSF Login </title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+              crossorigin="anonymous"/>
+
+        <link rel="stylesheet" href="css/login.css"/>
+
+    </h:head>
+    <h:body>
+
+        <div class="container-sm">
+            <h:form >
+                <h3>Please enter your name and password.</h3>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><h:inputText id="inputName" value="#{User.name}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><h:inputSecret value="#{User.password}"/></td>
+                    </tr>
+                </table>
+
+                <p><h:commandButton id="loginBtn" value="Login" action="welcome"/></p>
+
+                <h:commandButton id="showBtn" value="Show Message">
+                    <f:ajax execute="inputName" render="outputMessage"/>
+                </h:commandButton>
+
+                <h2><h:outputText id="outputMessage"
+                                  value="#{User.name != null ? User.name : ''}"
+                /></h2>
+            </h:form>
+        </div>
+        <!--        <div class="container-sm">-->
+        <!--            <h1 class="display-4"> Login Form &#129488; </h1>-->
+        <!--            <h:form style="width: 50%">-->
+
+        <!--                <div class="mb-3">-->
+        <!--                    <label for="inputName" class="form-label">Name</label>-->
+        <!--                    <h:inputText type="text" class="form-control" id="inputName" value="#{User.name}"  style="  width: 150px" />-->
+        <!--                </div>-->
+
+        <!--                <div class="mb-3">-->
+        <!--                    <label for="inputPass" class="form-label">Password</label>-->
+        <!--                    <h:inputSecret type="password" class="form-control" id = "inputPass" value="#{User.password}" style="width: 150px" />-->
+        <!--                </div>-->
+
+        <!--                <h:commandButton class="btn btn-primary" action="welcome" value="Login" id="loginBtn"></h:commandButton>&nbsp; &nbsp; &nbsp; &nbsp;-->
+
+        <!--                <h:commandButton class="btn btn-info" value="Show" id="showBtn">-->
+        <!--                    <f:ajax execute="inputName" render="outputMessage" />-->
+        <!--                </h:commandButton>-->
+
+        <!--                <h2>-->
+        <!--                    <h:outputText id="outputMessage" value="#{User.name != null ? User.name : ''}"/>-->
+        <!--                </h2>-->
+
+        <!--            </h:form>-->
+        <!--        </div>-->
+
+    </h:body>
+</h:form>
+</html>

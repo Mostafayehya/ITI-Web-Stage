@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "student")
-public class Student {
+public class Student {  
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,29 +34,13 @@ public class Student {
     @Column(name = "gender")
     private String gender;
 
-
-
     @AssertFalse(message = "Student must not be working")
     private boolean working;
 
     public boolean isWorking() {
         return working;
     }
-
-    public void setWorking(boolean working) {
-        this.working = working;
-    }
-
-    public Student() {
-    }
-
-    public Student( String name, Integer age, String email, Date birthDate, String gender) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
-        this.birthDate = birthDate;
-        this.gender = gender;
-    }
+  
 
     public Long getId() {
         return id;
@@ -105,5 +89,20 @@ public class Student {
     public void setGender(String gender) {
         this.gender = gender;
     }
-}
 
+
+    public void setWorking(boolean working) {
+        this.working = working;
+    }
+
+    public Student() {
+    }
+
+    public Student( String name, Integer age, String email, Date birthDate, String gender) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.gender = gender;
+    }
+}

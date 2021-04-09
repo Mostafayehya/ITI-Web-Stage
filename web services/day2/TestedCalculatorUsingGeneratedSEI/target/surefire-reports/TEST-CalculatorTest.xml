@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CalculatorTest" time="1.786" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI\target\test-classes;E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI\target\classes;C:\Users\moust\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\3.0.0\jakarta.xml.ws-api-3.0.0.jar;C:\Users\moust\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\2.0.0\jakarta.xml.soap-api-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\jws\jakarta.jws-api\3.0.0\jakarta.jws-api-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\ws\jaxws-rt\3.0.0\jaxws-rt-3.0.0.jar;C:\Users\moust\.m2\repository\org\glassfish\ha\ha-api\3.1.12\ha-api-3.1.12.jar;C:\Users\moust\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar;C:\Users\moust\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.2\gmbal-api-only-4.0.2.jar;C:\Users\moust\.m2\repository\org\jvnet\staxex\stax-ex\2.0.0\stax-ex-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.0.1\streambuffer-2.0.1.jar;C:\Users\moust\.m2\repository\org\jvnet\mimepull\mimepull\1.9.13\mimepull-1.9.13.jar;C:\Users\moust\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.0.0\FastInfoset-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\mail\jakarta.mail\2.0.0\jakarta.mail-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\2.0.0\saaj-impl-2.0.0.jar;C:\Users\moust\.m2\repository\com\fasterxml\woodstox\woodstox-core\6.2.1\woodstox-core-6.2.1.jar;C:\Users\moust\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\moust\.m2\repository\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\bind\jaxb-impl\3.0.0\jaxb-impl-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\bind\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;C:\Users\moust\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.1\junit-jupiter-api-5.7.1.jar;C:\Users\moust\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\moust\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\moust\.m2\repository\org\junit\platform\junit-platform-commons\1.7.1\junit-platform-commons-1.7.1.jar;C:\Users\moust\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.1\junit-jupiter-engine-5.7.1.jar;C:\Users\moust\.m2\repository\org\junit\platform\junit-platform-engine\1.7.1\junit-platform-engine-1.7.1.jar;src/test/java/;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="Africa/Cairo"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.9\bin"/>
+    <property name="sun.java.command" value="C:\Users\moust\AppData\Local\Temp\surefire1796330250590650026\surefirebooter10252847291132247332.jar C:\Users\moust\AppData\Local\Temp\surefire1796330250590650026 2021-03-30T14-24-08_989-jvmRun1 surefire6998049363494722135tmp surefire_09315920136199892970tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI\target\test-classes;E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI\target\classes;C:\Users\moust\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\3.0.0\jakarta.xml.ws-api-3.0.0.jar;C:\Users\moust\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\2.0.0\jakarta.xml.soap-api-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\jws\jakarta.jws-api\3.0.0\jakarta.jws-api-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\ws\jaxws-rt\3.0.0\jaxws-rt-3.0.0.jar;C:\Users\moust\.m2\repository\org\glassfish\ha\ha-api\3.1.12\ha-api-3.1.12.jar;C:\Users\moust\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar;C:\Users\moust\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.2\gmbal-api-only-4.0.2.jar;C:\Users\moust\.m2\repository\org\jvnet\staxex\stax-ex\2.0.0\stax-ex-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.0.1\streambuffer-2.0.1.jar;C:\Users\moust\.m2\repository\org\jvnet\mimepull\mimepull\1.9.13\mimepull-1.9.13.jar;C:\Users\moust\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.0.0\FastInfoset-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\mail\jakarta.mail\2.0.0\jakarta.mail-2.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\2.0.0\saaj-impl-2.0.0.jar;C:\Users\moust\.m2\repository\com\fasterxml\woodstox\woodstox-core\6.2.1\woodstox-core-6.2.1.jar;C:\Users\moust\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\moust\.m2\repository\com\sun\activation\jakarta.activation\2.0.0\jakarta.activation-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.0.0\jakarta.annotation-api-2.0.0.jar;C:\Users\moust\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\3.0.0\jakarta.xml.bind-api-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\bind\jaxb-impl\3.0.0\jaxb-impl-3.0.0.jar;C:\Users\moust\.m2\repository\com\sun\xml\bind\jaxb-core\3.0.0\jaxb-core-3.0.0.jar;C:\Users\moust\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.1\junit-jupiter-api-5.7.1.jar;C:\Users\moust\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\moust\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\moust\.m2\repository\org\junit\platform\junit-platform-commons\1.7.1\junit-platform-commons-1.7.1.jar;C:\Users\moust\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.1\junit-jupiter-engine-5.7.1.jar;C:\Users\moust\.m2\repository\org\junit\platform\junit-platform-engine\1.7.1\junit-platform-engine-1.7.1.jar;src/test/java/;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\moust"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-10-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\moust\AppData\Local\Temp\surefire1796330250590650026\surefirebooter10252847291132247332.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.9+7-LTS"/>
+    <property name="user.name" value="moust"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\moust\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\moust\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.9"/>
+    <property name="user.dir" value="E:\ITI 2020\ITI-Web-Stage\web services\day2\TestedCalculatorUsingGeneratedSEI"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.9\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-11.0.9;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.6.3\bin;C:\Program Files\Java\jdk-11.0.9\bin;C:\Program Files (x86)\Calibre2\;C:\Program Files\Java\jdk-11.0.9\bin;C:\Program Files\Java\scripts;C:\scripts;C:\Program Files\apache-maven-3.6.3\bin;C:\jaxb-ri\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\moust\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\bin;C:\Users\moust\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.9+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="subTest" classname="CalculatorTest" time="0.282"/>
+  <testcase name="addTest" classname="CalculatorTest" time="0"/>
+  <testcase name="mulTest" classname="CalculatorTest" time="0.001"/>
+  <testcase name="divTest" classname="CalculatorTest" time="0.012"/>
+</testsuite>
