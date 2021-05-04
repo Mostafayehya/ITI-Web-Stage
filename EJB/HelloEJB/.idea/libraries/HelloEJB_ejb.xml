@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HelloEJB-ejb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/HelloEJB-ejb/dist/HelloEJB-ejb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

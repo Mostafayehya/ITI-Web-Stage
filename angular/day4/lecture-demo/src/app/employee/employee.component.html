@@ -1,0 +1,31 @@
+<p>employee works!</p>
+<input [value]="employee.lastName"  (keyup)="setLastName(inputLastName.value)" #inputLastName type="text">
+<br>
+<input type="text" [(ngModel)]="employee.lastName">
+<br>
+<input #inputLastName type="text" (keyup.enter)="setLastName(inputLastName.value)">
+<br>
+<input type="number" [(ngModel)]="employee.age">
+{{employee.age}}
+<br>
+<h1 class="abc" [class.green-color]="employee.age<=20" [class.red-color]="employee.age>20">Your age is {{employee.age}}</h1>
+<h1 [ngClass]="{'abc green-color': employee.age<20,'red-color':employee.age>20}" class="abc" [class.green-color]="employee.age<=20" [class.red-color]="employee.age>20">Your age is {{employee.age}}</h1>
+<h1 [hidden]="employee.age<=20"  [class.red-color]="employee.age>20">Sorry your age above 20</h1>
+<h1 *ngIf="employee.age>20"  [class.red-color]="employee.age>20">Sorry your age above 20</h1>
+
+<br>
+<button (click)="setFirstName()">Change First Name</button>
+<!-- <h1>My Name is {{firstName}}</h1>
+<h1>My Name is {{firstName +''+ lastName}}</h1>
+<h1>Full Name {{getFullName()}}</h1> -->
+<br>
+<img src="/assets/images/ITI.png">
+
+<table>
+    <tr *ngFor="let item of names;let currentIndex=index">
+
+        <td>{{currentIndex+1}}</td>
+        <td> {{item}}</td>
+    </tr>
+</table>
+

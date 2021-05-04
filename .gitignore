@@ -8,4 +8,37 @@ Web technologies course/day9/Contacts/ClientSide_Projects
 */target/*
 *.class
 
+*/node_modules/*
 
+
+
+/EJB/HelloEJB/nbproject/private/
+/EJB/HelloEJB/HelloEJB-ejb/nbproject/private/
+/EJB/HelloEJB/HelloEJB-war/nbproject/private/
+/EJB/HelloEJB/dist/
+/EJB/HelloEJB/build/
+/EJB/HelloEJB/HelloEJB-ejb/dist/
+/EJB/HelloEJB/HelloEJB-war/build/
+/EJB/HelloEJB/HelloEJB-war/dist/
+/EJB/HelloEJB/HelloEJB-ejb/build/
+/EJB/Spring/target/
+/EJB/JMSDemo/nbproject/private/
+/EJB/JMSDemo/build/
+/EJB/JMSDemo/dist/
+/SpringMVC/SpringMVC/nbproject/private/
+/SpringMVC/SpringMVC/build/
+/SpringMVC/SpringMVC/dist/
+/SpringMVC/SpringMVC2/nbproject/private/
+/SpringMVC/SpringMVC2/build/
+/SpringMVC/SpringMVC2/dist/
+/SpringMVC/HelloSpringMVC/target/
+/JSF/day2/GreenShop_JSF/target/
+/JSF/lab2/GreenShop/target/
+/JSF/lab3/Lab 3 - Form Validation and Local/target/
+/SpringMVC/com.mostafayehya_HelloSpringMVC_war_1.0-SNAPSHOT/target/
+/SpringMVC/AnnotationBasedSpringMVC/target/
+/SpringMVC/NoXmlSpringMVC/nbproject/private/
+/SpringMVC/NoXmlSpringMVC/build/
+/SpringMVC/NoXmlSpringMVC/dist/
+/SpringMVC/spring-web-demo-all-java/nbproject/private/
+/SpringMVC/spring-web-demo-all-java/build/

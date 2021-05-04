@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <managed-bean>
+        <managed-bean-name>userReg</managed-bean-name>
+        <managed-bean-class>org.iti.greenshop.UserReg</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>myBean</managed-bean-name>
+        <managed-bean-class>org.iti.greenshop.UserBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>voteBean</managed-bean-name>
+        <managed-bean-class>org.iti.greenshop.VoteBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>listBean</property-name>
+            <value>#{listBean}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean eager="true">
+        <managed-bean-name>listBean</managed-bean-name>
+        <managed-bean-class>org.iti.greenshop.ListBean</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>ar_EG</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>jsf308</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
+
+</faces-config>

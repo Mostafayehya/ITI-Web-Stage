@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/mvc">
+    
+    
+    <mvc:annotation-drivern/>
+
+   
+    <bean name="helloController" 
+          class="com.mostafayehya.hellospringmvc.HelloWorldController" />
+    
+    <bean id="urlMapping"
+          class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/welcome.htm">helloController</prop>
+                <prop key="/contactUs.htm">contactUsController</prop>
+                <prop key="/aboutUs.htm">aboutUsController</prop>
+                <prop key="/hello2.htm">helloWorldAbstractUrlViewController</prop>
+            </props>
+            
+        </property>
+    </bean>
+    
+    <bean id="viewResolver"
+          class ="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    
+    
+    <!--ParameterizableViewController-->
+
+    <bean name="contactUsController" class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="contactUs"
+          p:statusCode="ACCEPTED" /> 
+    
+    <!--AbstracUrlViewController didn't work-->
+    <bean name="helloWorldAbstractUrlViewController"
+          class="com.mostafayehya.hellospringmvc.HelloWorldAbstractUrlViewController"/>
+    
+    <!--UrlFileNameViewController-->
+    <bean name="aboutUsController"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    
+    
+
+</beans>

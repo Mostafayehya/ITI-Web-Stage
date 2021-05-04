@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd"
+    
+       xmlns:p="http://www.springframework.org/schema/p">
+    
+   
+    <context:annotation-config/>
+    
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+    
+    <!--Bean to test collection properties-->
+
+
+    <bean id="daoService"
+          class="com.mostafayehya.services.impl.DAOServiceImpl" >
+       
+    </bean>
+    
+    <bean id="productDAO"
+          class="com.mostafayehya.services.impl.ProductDAOImpl" >
+
+    </bean>
+    <bean id="userDAO"
+          class="com.mostafayehya.services.impl.UserDAOImpl" >
+
+    </bean>
+    
+    
+    <!-- ===========================Testing Qualifier=================================-->
+    
+    <bean id="user" class="com.mostafayehya.entities.User">  
+    </bean>
+
+    
+    
+    <bean id="account1"
+          class="com.mostafayehya.entities.Account" >
+        
+        <qualifier type="com.mostafayehya.tests.day3.AccountQualifier">
+            <attribute key="name" value="mostafa"/>
+            <attribute key="mobile" value="Vodafone"/>
+        </qualifier>
+        <property name="id" value="1"/>
+        <property name="balance" value="11.1"/>
+        <property name="name" value="mostafa"/>
+        <property name="mobile" value="Vodafone"/>
+   
+
+    </bean>
+    <bean id="account2"
+          class="com.mostafayehya.entities.Account" >
+        
+        <qualifier type="com.mostafayehya.tests.day3.AccountQualifier">
+            <attribute key="name" value="Yehya"/>
+            <attribute key="mobile" value="Etisalat"/>
+        </qualifier>
+        
+        <property name="id" value="2"/>
+        <property name="balance" value="12.2"/>
+        <property name="name" value="Yehya"/>
+        <property name="mobile" value="Etisalat"/>
+    
+    </bean>
+    
+    <bean id="account3"
+          class="com.mostafayehya.entities.Account" >
+        
+        <qualifier type="com.mostafayehya.tests.day3.AccountQualifier">
+            <attribute key="name" value="Mansour"/>
+            <attribute key="mobile" value="Orange"/>
+        </qualifier>
+        
+        <property name="id" value="3"/>
+        <property name="balance" value="13.3"/>
+        <property name="name" value="Mansour"/>
+        <property name="mobile" value="Orange"/>
+
+    </bean>
+    
+    
+    
+
+    
+    
+    
+     
+
+</beans>

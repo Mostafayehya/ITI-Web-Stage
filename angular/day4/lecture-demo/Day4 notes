@@ -1,0 +1,12 @@
+1-Reactive forms module    // First step module, second step service
+2- FormBuilder service     // buidling form in runtime 
+3- Controls + validation 
+
+-- Syntax of form isn't the best thing 
+
+ * make a login component 
+ * step up path
+
+
+ Shared component 
+

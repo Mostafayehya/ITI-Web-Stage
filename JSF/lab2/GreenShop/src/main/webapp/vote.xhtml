@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" >
+<h:head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>GreenShope</title>
+</h:head>
+<h:body>
+            <f:view>
+                <h1 style="text-align: center">Vote</h1>
+                <h:form style="text-align: center; padding-top: 10px; padding-left: 20%">
+
+                    <table border="1">
+                        <tr>
+                            <td style="margin-top: 2px">
+                                <h:selectOneRadio value="#{voteBean.chosen}" >
+                                    <f:selectItems value="#{listBean.categoryList}" var="c"
+                                                   itemLabel="#{c.categoryLabel}" itemValue="#{c.categoryValue}"/>
+                                </h:selectOneRadio>
+
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h:commandButton value="Submit" action="#{voteBean.voteButtonBack}"
+                                                 disabled="#{voteBean.voted}"/>
+                            </td>
+                            <td>
+                                <h:commandButton value="View Result" action="results"  />
+                            </td>
+                        </tr>
+                    </table>
+                </h:form>
+            </f:view>
+</h:body>
+</html>

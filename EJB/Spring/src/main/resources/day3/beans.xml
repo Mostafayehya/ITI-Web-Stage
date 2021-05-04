@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context 
+       http://www.springframework.org/schema/context/spring-context.xsd"
+    
+       xmlns:p="http://www.springframework.org/schema/p"
+       default-init-method="init"
+       default-destroy-method="kill">
+    
+   
+    <context:property-placeholder location="day3/child.info.properties"/>
+    
+    <!--Bean to test collection properties-->
+
+    <bean id="parent" abstract="true"
+          class="com.mostafayehya.entities.Parent" >
+        
+        <property name="name" value="Parent Name"/>
+        <property name="age" value="20"/>
+        
+    </bean>
+    
+    <bean id="child" parent="parent"
+          class="com.mostafayehya.entities.Child" >
+        
+        <property name="address" value="child address"/>
+        
+    </bean>
+    
+    
+    <bean id="parent2" abstract="true">
+        
+        <property name="name" value="Parent Name"/>
+        <property name="age" value="20"/>
+        
+    </bean>
+    
+    <bean id="child2" parent="parent"
+          class="com.mostafayehya.entities.Child" >
+        
+        <property name="address" value="child address"/>
+        
+    </bean>
+    
+    
+    <!--  ======================Testing Inheritance of SET COLLECTION==========================-->
+
+    <bean id="user" class="com.mostafayehya.entities.User" >
+        
+        <constructor-arg index="0" value="Mostafa"/>     
+        <constructor-arg index="1" value="Yehya"/>     
+    </bean>
+    
+    <bean id="parent3" abstract="true"
+          class ="com.mostafayehya.entities.ComplexObject">
+        
+        <property name="usersList">
+            
+            <list>
+                <value>This is Parent3 of type ComplexObject</value>
+                <ref bean="user"/>
+            </list>
+            
+        </property>
+        
+    </bean>
+    
+    <bean id="child3" parent="parent3" >
+        
+        <property name="usersList">
+            <list merge="true">
+                <value>Hello World 2</value>
+                <ref bean="user"/>
+            </list>
+            
+        </property>
+        
+    </bean>
+    
+    <!--  ======================Testing Inheritance of SET COLLECTION==========================-->
+
+
+    <bean id="user2" class="com.mostafayehya.entities.User" >
+        
+        <constructor-arg index="0" value="Masnour"/>     
+        <constructor-arg index="1" value="Ahmed"/>     
+    </bean>
+    
+    <bean id="parent4" abstract="true"
+          class ="com.mostafayehya.entities.ComplexObject">
+        
+        
+        <property name="usersList">
+            
+            <list>
+                <value>parent userlist item</value>
+            </list>
+            
+        </property>
+        <property name="usersSet">
+          
+            <set>
+                <value>This is Parent4 of type ComplexObject</value>
+                <ref bean="user2"/>
+            </set>
+            
+        </property>
+        
+    </bean>
+    
+    <bean id="child4" parent="parent4" >
+        
+        
+        <property name="usersList">
+            <list merge="true">
+                <value>child4 userlist item</value>
+            </list>
+            
+        </property>
+        
+        <property name="usersSet">
+            <set merge="true">
+                <value>Hello World 3</value>
+            </set>
+            
+        </property>
+        
+    </bean>
+       
+       
+    <!--  ======================Testing PropertyPlaceHolderConfigurer==========================-->
+           
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+               
+        <property name="locations">
+            <value>day3/child.info.properties</value>
+        </property>
+               
+    </bean>
+               
+    <bean id="childWithExternalProperties" class="com.mostafayehya.entities.Child">
+        <property name="name" value="${child.name}"/>
+        <property name="age" value="${child.age}"/>
+        <property name="address" value="${child.address}"/>
+    </bean>
+
+    
+   
+   
+     
+
+</beans>

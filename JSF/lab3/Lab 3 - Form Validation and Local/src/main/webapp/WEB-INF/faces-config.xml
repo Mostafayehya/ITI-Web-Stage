@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              version="3.0"
+              xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd">
+
+    <managed-bean>
+        <managed-bean-name>myBean</managed-bean-name>
+        <managed-bean-class>org.iti.greenshop.bean.UserBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <application>
+        <resource-bundle>
+            <base-name>Bundles.reg</base-name>
+            <var>lang</var>
+        </resource-bundle>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>ar_EG</supported-locale>
+        </locale-config>
+    </application>
+
+</faces-config>

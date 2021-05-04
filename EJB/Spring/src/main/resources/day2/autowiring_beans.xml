@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:p="http://www.springframework.org/schema/p"
+       >
+       <!--default-autowire-candidates="user*">--> 
+    
+    
+    <!--Bean to test collection properties-->
+
+    <bean id="productDAO" class="com.mostafayehya.services.impl.ProductDAOImpl">
+       
+    </bean>
+    
+    <bean id="userDAO" class="com.mostafayehya.services.impl.UserDAOImpl">
+       
+    </bean>
+    
+    <!--Autowiring byName will use the setter method of the DAOServiceImpl-->
+    <!--    <bean id="daoService" class="com.mostafayehya.services.impl.DAOServiceImpl" autowire="byName">
+        
+    </bean>-->
+    
+    <!--Autowiring byTypewill use the constructor method of the DAOServiceImpl-->
+
+    <bean id="daoService" class="com.mostafayehya.services.impl.DAOServiceImpl" autowire="byType">
+        
+    </bean>
+    
+    
+    
+    <!--    <bean id="userDAO" class="com.mostafayehya.services.impl.UserDAOImpl" autowire-candidate="false">
+       
+    </bean>-->
+    
+   
+     
+
+</beans>

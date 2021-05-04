@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header" *ngIf="getPendingTasks()>0">
+          Hello {{name}} , your tasks is <span [class.bg-success]="getPendingTasks()<=3" [class.bg-danger]="getPendingTasks()>3"> {{getPendingTasks()}}</span> 
+        </div>
+        <div class="card-header" *ngIf="getPendingTasks()==0">
+          Hello {{name}} ,no tasks found
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <input #inputTaskTitle (keyup.enter)="addTask(inputTaskTitle.value)" placeholder="Your task title" type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <button  (click)="addTask(inputTaskTitle.value)" class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of tasks;let currentIndex=index">
+                            <td>{{currentIndex+1}}</td>
+                            <td> 
+                              <a routerLink="/details/{{item.ID}}">
+                                {{item.Title}} -- {{item.ID}}
+                              </a>
+                             </td>
+                             <!-- <td> 
+                              <a [routerLink]="/details",item.ID>
+                                {{item.Title}} -- {{item.ID}}
+                              </a>
+                             </td> -->
+                            <td>
+                                <input [(ngModel)]="item.IsDone" type="checkbox">
+                            </td>
+                            <td>
+                                <button (click)="delete(currentIndex)" type="button" class="btn btn-danger">DELETE</button>
+                            </td>
+
+                          </tr>
+                         
+                         
+                        </tbody>
+                      </table>
+                </div>
+               
+            </div>
+        </div>
+      </div>
+</div>

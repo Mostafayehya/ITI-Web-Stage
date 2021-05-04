@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean id="service1"
+          class="com.mostafayehya.services.impl.FirstServiceImpl" />
+   
+
+    
+    <bean id="service2" class="com.mostafayehya.services.impl.FirstServiceImpl">
+        <constructor-arg index="1"  value = "Mostafa"/>
+        <constructor-arg index="0" value = "50"/>
+    </bean>
+    
+    <bean id="service3" class="com.mostafayehya.services.impl.FirstServiceImpl">
+        <constructor-arg  value = "Mostafa"/>
+    </bean>
+
+    <bean id="service4" class="com.mostafayehya.services.impl.FirstServiceImpl">
+        <constructor-arg  value = "60"/>
+    </bean>
+
+    <bean id="service5" class="com.mostafayehya.services.impl.FirstServiceImpl"
+          factory-method="createFirstServiceImpl">
+
+        <constructor-arg  value ="5"/>
+    </bean>
+
+    <bean id="service6" class="com.mostafayehya.services.impl.FirstServiceImpl"
+          factory-method="createFirstServiceImpl">
+        <constructor-arg  value = "6"/>
+        <constructor-arg  value = "service6"/>
+    </bean>
+
+    <bean id="factory" class="com.mostafayehya.services.impl.FirstServiceFactory">
+               
+    </bean>
+
+    <bean id="service7"
+          factory-bean="factory"
+          factory-method="createFristSeriveImpl">
+       
+        <constructor-arg  value = "7"/>
+        <constructor-arg  value = "service7"/>
+    </bean> 
+    
+     
+
+</beans>

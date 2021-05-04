@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Lab1:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Lab1</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jsfLab2-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Lab1:war exploded" />
+    </root>
+  </artifact>
+</component>

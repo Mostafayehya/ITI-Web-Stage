@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+
+    
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    
+    <aop:aspectj-autoproxy/>
+    
+    <bean id="calc"
+           class="com.mostafayehya.AOP.day2.CalculatorImpl" />
+    
+    <bean id="log" class="com.mostafayehya.AOP.day2.CalculatorBefore"/>
+    <bean id="log1" class="com.mostafayehya.AOP.day2.CalculatorBefore1"/>
+    <bean id="log2" class="com.mostafayehya.AOP.day2.CalculatorAfter"/>
+    <bean id="log3" class="com.mostafayehya.AOP.day2.CalculatorAfterReturn"/>
+    <bean id="log4" class="com.mostafayehya.AOP.day2.CalculatorAfterThrow"/>
+    <bean id="log5" class="com.mostafayehya.AOP.day2.CalculatorAround"/>
+    
+    <!--    Reusing the Calculator Bean-->
+    <bean id="log6" class="com.mostafayehya.AOP.day2.CalculatorAspect"/>
+
+    
+    
+    
+   
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean id="factory" class="com.mostafayehya.services.impl.DAOServiceFactory">
+    </bean>
+    
+    <bean id="productDAO" class="com.mostafayehya.services.impl.ProductDAOImpl">
+    </bean>
+    <bean id="userDAO" class="com.mostafayehya.services.impl.UserDAOImpl">
+    </bean>
+    
+    
+    <!-- This is constructor based injection-->
+    <bean id="daoService" class="com.mostafayehya.services.impl.DAOServiceImpl"
+    factory-bean="factory"
+    factory-method="createDAOService">
+        
+        <constructor-arg ref="productDAO"/>
+        
+        <constructor-arg>
+            <bean class="com.mostafayehya.services.impl.UserDAOImpl"/>
+        </constructor-arg>
+        
+  
+    </bean>
+    
+
+     
+
+</beans>

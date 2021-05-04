@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean id="userCalc" class="com.mostafayehya.AOP.day1.JdkDynamicProxy.CalculatorImpl"/>
+
+    <bean id="beforeAdvice" class="com.mostafayehya.AOP.day1.ProxyBasedAop.CalculatorBefore"/>
+    
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator "/>
+    
+    <!--Convenient advisor class to declare an advisor in one shot-->
+    <bean id="methodNameAdvisor" 
+          class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+        <property name="mappedNames">
+            <list>
+                <value>add</value>
+                <value>sub</value>
+            </list>
+        </property>
+        <property name="advice" ref="beforeAdvice"/>
+    </bean>
+    
+    <bean id="regexAdvisor"
+          class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="patterns">
+            <list>
+                <value>.*mul.*</value>
+                <value>.*div.*</value>
+            </list>
+        </property>
+        <property name="advice" ref="beforeAdvice"/>
+    </bean>
+    
+
+ 
+     
+
+</beans>

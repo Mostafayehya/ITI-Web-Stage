@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    
+    
+    <bean id="calc"
+          class="com.mostafayehya.AOP.day2.CalculatorImpl" />
+    
+    <bean id="aspect" class="com.mostafayehya.AOP.day2.CalculatorBefore"/>
+
+    
+    <aop:config>
+        
+        <aop:aspect id="aspect1" ref="aspect">
+            
+            <aop:pointcut id="pointcutBefore" expression="execution(* *.*(..))"/>
+            <aop:before method="before" pointcut-ref="pointcutBefore"/>
+            
+        </aop:aspect>
+    </aop:config>
+
+    
+    
+    
+   
+</beans>

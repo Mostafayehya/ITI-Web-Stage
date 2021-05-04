@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean id="productDAORef" class="com.mostafayehya.services.impl.ProductDAOImpl">
+    </bean>
+    
+    <bean id="userDAORef" class="com.mostafayehya.services.impl.UserDAOImpl">
+    </bean>
+    
+    
+    <!-- This is constructor based injection-->
+    <bean id="daoService" class="com.mostafayehya.services.impl.DAOServiceImpl"
+    >
+       
+        <property name="productDAO" ref="productDAORef"/>
+        <property name="userDAO" ref="userDAORef"/>
+    </bean>
+
+     
+
+</beans>

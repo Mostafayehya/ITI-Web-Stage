@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:p="http://www.springframework.org/schema/p">
+    
+    
+    <!--Bean to test collection properties-->
+
+    <bean id="seller"
+          class="com.mostafayehya.entities.Seller">
+        
+        <property name="products">
+            <list>
+                <value>Watch</value>
+                <value>mobile</value>
+                <value>food</value>
+                <ref bean="user1"/>            
+            </list>
+        </property>
+        
+        <property name="phoneNumbers">
+            <set>
+                <value>0111111111</value>
+                <value>0222222222</value>
+                <value>mobile</value>
+                          
+            </set>
+        </property>
+        
+        <property name="messages">
+            <map>
+                <entry key="random" value="random"/>
+                <entry key="random" value="random"/>
+            </map>
+        </property>
+        
+    </bean>
+    
+    <bean id="user1" class="com.mostafayehya.entities.User">
+        
+        <constructor-arg index="0" value="mostafa"/>
+        <constructor-arg index="1" value="yehya"/>
+    </bean>
+    
+    <bean id="user2" class="com.mostafayehya.entities.User">
+        <constructor-arg index="0" value="Ahmed"/>
+        <constructor-arg index="1" value="Dao"/>
+    </bean>
+    
+    <bean id="message1" class="com.mostafayehya.entities.Message">
+        <constructor-arg value="Hello User 1"/>
+    </bean>
+    
+    <bean id="message2" class="com.mostafayehya.entities.Message">
+        
+        <constructor-arg value="Hello User 1 again"/>
+    </bean>
+    
+    <bean id="message3" class="com.mostafayehya.entities.Message" >
+        
+        <constructor-arg value="Hello User 2"/>
+    </bean>
+    
+    <bean id="message4" class="com.mostafayehya.entities.Message">
+        
+        <constructor-arg value="Hello User 2 again"/>
+    </bean>
+    
+    
+    <!--Configuring null beans-->
+    
+    <bean id="nullbean" class="com.mostafayehya.entities.Message">
+        
+        <property name="content" >
+            <null/>
+        </property>
+            
+    </bean>
+    
+   
+     
+
+</beans>

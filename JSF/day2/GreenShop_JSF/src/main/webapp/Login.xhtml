@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+>
+    <h:head>
+        <title>GreenShope</title>
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form prependId="false">
+                <div id="wrapper">
+                    <div id="header">
+                        <div id="logo">
+                            <h1><a href="#">Greenshop</a></h1>
+                            <p>by JETS Team </p>
+                        </div>
+                    </div>
+                    <!-- end #header -->
+                    <div id="menu">
+                        <ul>
+                            <li ><h:link outcome="Home" value="Home"></h:link></li>
+                            <li class="current_page_item"><h:link  outcome="Login" value="Login"></h:link></li>
+                            <li><h:link  value="Register"></h:link></li>
+                            <li><h:link  value="Search"></h:link></li>
+                            <li><h:link  value="Vote"></h:link></li>
+                        </ul>
+                    </div>
+                    <!-- end #menu -->
+                    <div id="page">
+                        <div id="content">
+                            <div id="banner"><img src="images/img07.jpg" alt="" /></div>
+                            <div class="post">
+                                <h2 class="title"><a href="#">Greenshop</a></h2>
+                                <p class="meta">Login Page</p>
+                                <div class="entry">
+
+                                    <p>Please enter your Login Data</p>
+                                    <table>
+                                        <tr>
+                                            <td>Name:</td>
+                                            <td><h:inputText value="#{myBean.userName}" id="name" required="true"/></td>
+                                            <h:message for="name"/>
+                                        </tr>
+                                        <tr>
+                                            <td>Password:</td>
+                                            <td><h:inputSecret value="#{myBean.password}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h:commandButton value="Login" action="Welcome" /></td>
+                                            <td><h:commandButton value="+AJAX"  >
+                                                    <f:ajax execute="name" render="out"/>
+                                                </h:commandButton></td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td colspan="2"><h:outputText id="out" value="#{fn:toUpperCase(myBean.greeting)}"/></td>
+
+                                        </tr>
+                                    </table>
+
+
+
+                                </div>
+                            </div>
+                            <div style="clear: both;">&nbsp;</div>
+                        </div>
+                        <!-- end #content -->
+                        <div id="sidebar">
+                            <ul>
+                                <li>
+                                    <h2>Inside Home+Garden</h2>
+                                    <img alt="Home"   src="images/AtHome.jpg" />
+                                </li>
+                                <li>
+                                    <h2>Categories</h2>
+                                    <ul>
+                                        <li><span>12004</span><a href="#">Clothing</a></li>
+                                        <li><span>50454</span><a href="#">Decorating</a></li>
+                                        <li><span>6235</span><a href="#">Garden</a></li>
+                                        <li><span>580</span><a href="#">Homeware</a></li>
+                                        <li><span>8905</span><a href="#">Incense and candles</a></li>
+                                        <li><span>700</span><a href="#">Toys and Games </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end #sidebar -->
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                    <!-- end #page -->
+                </div>
+                <div id="footer-content">
+                    <center><p> (c) 2009 Sitename.com. Design by <a href="http://www.nodethirtythree.com">nodethirtythree</a> and <a href="http://www.freecsstemplates.org">Free CSS Templates</a>.</p>
+                    </center>
+                </div>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
