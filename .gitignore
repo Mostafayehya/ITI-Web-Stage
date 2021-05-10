@@ -42,3 +42,5 @@ Web technologies course/day9/Contacts/ClientSide_Projects
 /SpringMVC/NoXmlSpringMVC/dist/
 /SpringMVC/spring-web-demo-all-java/nbproject/private/
 /SpringMVC/spring-web-demo-all-java/build/
+/SpringMVC/SpringData/target/
+/SpringSecurity/security/filters/target/

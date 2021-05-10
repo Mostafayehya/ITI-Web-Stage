@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Day2_Filters:war exploded">
+    <output-path>$PROJECT_DIR$/target/Day2_Filters-0.1.0</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>Day2_Filters</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Day2_Filters" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.6" />
+          <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.3.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.4.6" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.4.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.13.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.6" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.6" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.6" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.4" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/Day2_Filters-0.1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Day2_Filters/web/Web" />
+    </root>
+  </artifact>
+</component>

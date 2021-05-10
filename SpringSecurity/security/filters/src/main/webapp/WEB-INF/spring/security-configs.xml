@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--  Authentication Configuration  -->
+    <security:authentication-manager erase-credentials="true">
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="Mostafa" authorities="ROLE_USER"
+                               password="$2a$10$iT5dr2Fa1pihtYwPAWN1MOBGCUJOLt6i0jhp856jDFBPgAQqa7SDS"/>
+                <security:user name="Yehya" authorities="ROLE_MANAGER,ROLE_USER"
+                               password="$2a$10$iT5dr2Fa1pihtYwPAWN1MOBGCUJOLt6i0jhp856jDFBPgAQqa7SDS"/>
+                <security:user name="Mansour" authorities="ROLE_ADMIN,ROLE_USER,ROLE_MANAGER"
+                               password="$2a$10$iT5dr2Fa1pihtYwPAWN1MOBGCUJOLt6i0jhp856jDFBPgAQqa7SDS"/>
+            </security:user-service>
+            <security:password-encoder hash="bcrypt"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <!-- Authorization Configuration   -->
+    <security:http auto-config="true">
+        <security:access-denied-handler error-page="/WEB-INF/pages/error.jsp"/>
+        <security:intercept-url pattern="/admin/*" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/user" access="hasRole('ROLE_USER')"/>
+        <security:intercept-url pattern="/*" access="permitAll()"/>
+    </security:http>
+</beans>

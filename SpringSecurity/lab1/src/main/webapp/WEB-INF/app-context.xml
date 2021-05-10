@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd"
+       default-init-method="onInit"
+       default-destroy-method="onDestroy" default-lazy-init="true" default-autowire-candidates="service3*,service2">
+    <mvc:annotation-driven/>
+    <!--    <context:annotation-config/>-->
+    <aop:aspectj-autoproxy/>
+    <!--    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />-->
+    <context:component-scan base-package="spring.security" use-default-filters="true"/>
+    <context:property-placeholder location="classpath:application.properties"/>
+    <security:global-method-security secured-annotations="enabled" jsr250-annotations="enabled" pre-post-annotations="enabled" >
+<!--        <security:protect-pointcut expression="execution(* *.admin*(..))" access="ADMIN"/>-->
+    </security:global-method-security>
+
+    <bean id="myServletForwardingController" class="org.springframework.web.servlet.mvc.ServletForwardingController">
+        <property name="servletName" value="ServletForward"/>
+    </bean>
+
+
+    <bean id="myViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+        <property name="order" value="1"/>
+    </bean>
+
+
+    <mvc:view-controller path="/app/viewcon" view-name="HelloWorld"/>
+    <!--    <mvc:view-controller path="/app/register" view-name="Form"/>-->
+
+
+    <bean id="messagingSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages"/>
+    </bean>
+    <bean id="validator"
+          class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+    <!--    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver"></bean>-->
+    <!--    <bean class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>-->
+
+    <!--    $2a$10$wZxBd1E8SL0Zo7yF8tyAluqGvAottX.9M.MjBjXXhIAOTcMak6VPe -->
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="user" password="$2a$10$wZxBd1E8SL0Zo7yF8tyAluqGvAottX.9M.MjBjXXhIAOTcMak6VPe"
+                               authorities="USER"/>
+                <security:user name="admin" password="$2a$10$wZxBd1E8SL0Zo7yF8tyAluqGvAottX.9M.MjBjXXhIAOTcMak6VPe"
+                               authorities="ROLE_USERs,ROLE_ADMIN"/>
+            </security:user-service>
+            <security:password-encoder hash="bcrypt"/>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>
